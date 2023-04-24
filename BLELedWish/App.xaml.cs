@@ -1,5 +1,7 @@
-﻿using BLELedWish.ViewModel;
+﻿using BLELedWish.Service;
+using BLELedWish.ViewModel;
 using CommunityToolkit.Mvvm.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
 namespace BLELedWish
@@ -12,9 +14,24 @@ namespace BLELedWish
 
         public App()
         {
+            ConfigureServices();
 
-            Ioc.Default.ConfigureServices(s => s);
+            InitializeComponent();
+        }
 
+        /// <summary>
+        /// Configures the services for the application.
+        /// </summary>
+        private static void ConfigureServices()
+        {
+            var services = new ServiceCollection();
+            
+            services.AddSingleton<NavigationService>();
+
+            // View Models
+            services.AddTransient<HomeViewModel>();
+
+            Ioc.Default.ConfigureServices(services.BuildServiceProvider());
         }
 
     }

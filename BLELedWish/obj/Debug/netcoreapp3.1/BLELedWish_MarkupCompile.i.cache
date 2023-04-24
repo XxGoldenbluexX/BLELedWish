@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 E:\Content\Projects.NET\BLELedWish\BLELedWish\App.xaml
-41139465151
+61600440140
 
-10718332426
-193-171755194
-MainWindow.xaml;View\AboutView.xaml;View\EditMessageView.xaml;View\HomeView.xaml;
+121953180965
+1951494563659
+MainWindow.xaml;Resource\Control\MessageLEDTemplate.xaml;Themes\Generic.xaml;View\AboutView.xaml;View\EditMessageView.xaml;View\HomeView.xaml;
 
 False
 

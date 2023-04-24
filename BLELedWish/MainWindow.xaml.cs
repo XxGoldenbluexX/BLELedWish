@@ -1,4 +1,6 @@
-﻿using BLELedWish.ViewModel;
+﻿using BLELedWish.Service;
+using BLELedWish.ViewModel;
+using CommunityToolkit.Mvvm.DependencyInjection;
 using System.Windows;
 
 namespace BLELedWish
@@ -12,7 +14,11 @@ namespace BLELedWish
         {
             InitializeComponent();
 
-            DataContext = new HomeViewModel();
+            Title = "BLELedWish";
+            
+            var nav = Ioc.Default.GetService<NavigationService>();
+            nav.Setup(this);
+            nav.GoTo<HomeViewModel>();
         }
     }
 }
