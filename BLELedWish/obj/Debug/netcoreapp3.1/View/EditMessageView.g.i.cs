@@ -53,7 +53,7 @@ namespace BLELedWish.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BLELedWish;V1.0.0.0;component/view/editmessageview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BLELedWish;component/view/editmessageview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\EditMessageView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
