@@ -2,5 +2,8 @@
 {
     public class HomeViewModel
     {
+
+        public string Message => "OUI";
+
     }
 }

@@ -18,3 +18,11 @@ E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\BLELedWish
 E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\BLELedWish.dll
 E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\BLELedWish.pdb
 E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\BLELedWish.genruntimeconfig.cache
+E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\View\AboutView.g.cs
+E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\View\EditMessageView.g.cs
+E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\View\HomeView.g.cs
+E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\View\AboutView.baml
+E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\View\EditMessageView.baml
+E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\View\HomeView.baml
+E:\Content\Projects.NET\BLELedWish\BLELedWish\obj\Debug\netcoreapp3.1\App.baml
