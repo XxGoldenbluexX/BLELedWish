@@ -1,4 +1,5 @@
 ﻿using BLELedWish.ViewModel;
+using CommunityToolkit.Mvvm.DependencyInjection;
 using System.Windows;
 
 namespace BLELedWish
@@ -11,6 +12,9 @@ namespace BLELedWish
 
         public App()
         {
+
+            Ioc.Default.ConfigureServices(s => s);
+
         }
 
     }

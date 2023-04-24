@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "x0jbVBYjI4OIqlZEt/YrTVsAvnZVaGb+y8WNrsBsXgffkv51slW6ZOKXLvldJxUxW8xFnqYT3Cs9D5wE8GSNow==",
+  "dgSpecHash": "0mlClqHwe62P5RaSiQfs5oXUrtoZJBAb37Pay6z7A/VmHlnvN57AOF1M5QE8H3okYjI5c4tUKE3q+fv8rq/jTQ==",
   "success": true,
   "projectFilePath": "E:\\Content\\Projects.NET\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\p2006429\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
+    "C:\\Users\\p2006429\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\p2006429\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
