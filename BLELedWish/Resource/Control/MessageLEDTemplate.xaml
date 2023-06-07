@@ -5,6 +5,6 @@
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="Auto"/>
     </Grid.ColumnDefinitions>
-    <Label Content="{Binding Message}"/>
+    <TextBox Text="{Binding Message}"/>
     <CheckBox Grid.Column="2" IsChecked="{Binding Selected}"/>
 </Grid>
