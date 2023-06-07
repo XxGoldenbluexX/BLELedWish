@@ -5,9 +5,9 @@ namespace BLELedWish.View
     /// <summary>
     /// Logique d'interaction pour HomePage.xaml
     /// </summary>
-    public partial class HomeView : ContentControl
+    public partial class MessageListView : ContentControl
     {
-        public HomeView()
+        public MessageListView()
         {
             InitializeComponent();
         }

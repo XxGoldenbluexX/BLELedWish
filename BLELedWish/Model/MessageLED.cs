@@ -2,13 +2,13 @@
 
 namespace BLELedWish.Model
 {
-    public partial class MessageLED : ObservableObject
+    public partial class MessageLED : ObservableObject, IMessageBadge
     {
 
         [ObservableProperty]
-        private string message;
+        private string message = string.Empty;
 
         [ObservableProperty]
-        private bool selected;
+        private bool enabled = true;
     }
 }

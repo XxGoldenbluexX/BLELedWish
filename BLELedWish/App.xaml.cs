@@ -29,7 +29,7 @@ namespace BLELedWish
             services.AddSingleton<NavigationService>();
 
             // View Models
-            services.AddTransient<HomeViewModel>();
+            services.AddTransient<MessageListViewModel>();
 
             Ioc.Default.ConfigureServices(services.BuildServiceProvider());
         }

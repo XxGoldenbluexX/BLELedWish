@@ -10,8 +10,8 @@
         <DataTemplate DataType="{x:Type model:MessageLED}">
             <control:MessageLEDTemplate/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodel:HomeViewModel}">
-            <view:HomeView/>
+        <DataTemplate DataType="{x:Type viewmodel:MessageListViewModel}">
+            <view:MessageListView/>
         </DataTemplate>
     </Application.Resources>
 </Application>

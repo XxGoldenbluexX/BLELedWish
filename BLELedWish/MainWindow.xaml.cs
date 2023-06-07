@@ -18,7 +18,7 @@ namespace BLELedWish
             
             var nav = Ioc.Default.GetService<NavigationService>();
             nav.Setup(this);
-            nav.GoTo<HomeViewModel>();
+            nav.GoTo<MessageListViewModel>();
         }
     }
 }
