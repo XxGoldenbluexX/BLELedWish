@@ -1,5 +1,7 @@
 ﻿using BLELedWish.Model;
+using BLELedWish.Service;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -31,13 +33,19 @@ namespace BLELedWish.ViewModel
         private MessageLED selectedMessage;
 
         [RelayCommand]
+        private async void SendSelectedMessage()
+        {
+            await Ioc.Default.GetService<IBadgeService>()?.SendMessage(SelectedMessage);
+        }
+
+        [RelayCommand]
         private async void AddMessage()
         {
             messages.Add(new MessageLED());
         }
 
         [RelayCommand]
-        private async void DeleteSelectedRow()
+        private async void DeleteSelectedMessage()
         {
             messages.Remove(SelectedMessage);
         }

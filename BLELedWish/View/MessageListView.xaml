@@ -10,7 +10,8 @@
         </Grid.RowDefinitions>-->
         <TextBlock Text="Gestion des messages LED" FontSize="24"/>
         <StackPanel Grid.Row="1"
-                    Orientation="Horizontal">
+                    Orientation="Horizontal"
+                    Margin="0,10,0,0">
             <Button Grid.Row="1"
                 Content="Ajouter"
                 Command="{Binding AddMessageCommand}"/>
@@ -21,15 +22,21 @@
                   SelectedItem="{Binding SelectedMessage}"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
-                  Margin="10"
+                  Margin="0,10,0,0"
                   >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Message" Binding="{Binding Message}" Width="*"/>
-                <DataGridCheckBoxColumn Header="Activé" Binding="{Binding Enabled}" Width="auto"/>
+                <DataGridTemplateColumn Header="Envoi" Width="75">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Envoyer" Command="{Binding DataContext.SendSelectedMessageCommand, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTemplateColumn Header="Suppression" Width="75">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Supprimer" Command="{Binding DataContext.DeleteSelectedRowCommand, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}"/>
+                            <Button Content="Supprimer" Command="{Binding DataContext.DeleteSelectedMessageCommand, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
