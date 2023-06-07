@@ -1,17 +1,14 @@
 ﻿<Application x:Class="BLELedWish.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:view="clr-namespace:BLELedWish.View"
-             xmlns:viewmodel="clr-namespace:BLELedWish.ViewModel"
-             xmlns:model="clr-namespace:BLELedWish.Model"
-             xmlns:control="clr-namespace:BLELedWish.Resource.Control"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type model:MessageLED}">
-            <control:MessageLEDTemplate/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type viewmodel:MessageListViewModel}">
-            <view:MessageListView/>
-        </DataTemplate>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Views.xaml"/>
+                <ResourceDictionary Source="Templates.xaml"/>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

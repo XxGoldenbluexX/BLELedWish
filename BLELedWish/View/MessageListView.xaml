@@ -36,7 +36,9 @@
                 <DataGridTemplateColumn Header="Suppression" Width="75">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Supprimer" Command="{Binding DataContext.DeleteSelectedMessageCommand, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}"/>
+                            <Button Content="Supprimer"
+                                    Command="{Binding DataContext.DeleteSelectedMessageCommand, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}"
+                                    Style="{StaticResource DeleteButton}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
