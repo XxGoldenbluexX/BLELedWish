@@ -2,6 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:view="clr-namespace:BLELedWish.View"
                     xmlns:viewmodel="clr-namespace:BLELedWish.ViewModel">
+    <DataTemplate DataType="{x:Type viewmodel:ConnectionViewModel}">
+        <view:ConnectionView/>
+    </DataTemplate>
     <DataTemplate DataType="{x:Type viewmodel:MessageListViewModel}">
         <view:MessageListView/>
     </DataTemplate>

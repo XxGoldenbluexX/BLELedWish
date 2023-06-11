@@ -2,7 +2,6 @@
 using BLELedWish.ViewModel;
 using CommunityToolkit.Mvvm.DependencyInjection;
 using System.Windows;
-using System.Windows.Controls.Primitives;
 
 namespace BLELedWish
 {
@@ -20,7 +19,7 @@ namespace BLELedWish
             
             var nav = Ioc.Default.GetService<NavigationService>();
             nav.Setup(this);
-            nav.GoTo<MessageListViewModel>();
+            nav.GoTo<ConnectionViewModel>();
         }
     }
 }

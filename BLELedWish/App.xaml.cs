@@ -32,6 +32,7 @@ namespace BLELedWish
 
             // View Models
             services.AddTransient<MessageListViewModel>();
+            services.AddTransient<ConnectionViewModel>();
 
             Ioc.Default.ConfigureServices(services.BuildServiceProvider());
         }

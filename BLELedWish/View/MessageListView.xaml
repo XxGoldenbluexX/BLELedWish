@@ -18,7 +18,10 @@
             <TextBlock Text="{Binding FilteredMessage.Count, StringFormat='{}Nombre de messages: {0}', FallbackValue='Nombre de messages: 0'}" Margin="10,0,0,0"/>
         </StackPanel>
         <Popup IsOpen="{Binding IsPopupOpen}" Width="300" Height="100">
-            <Button Name="Valider" Content="Valider" Command="{Binding CloseModifCommand}"/>
+            <StackPanel>
+                <Button Content="Valider" Command="{Binding ValidateCommand}"/>
+                <Button Content="Cancel" Command="{Binding CloseModifCommand}"/>
+            </StackPanel>
         </Popup>
         <DataGrid Grid.Row="2"
                   ItemsSource="{Binding FilteredMessage}"
@@ -32,7 +35,7 @@
                 <DataGridTemplateColumn Header="Modifier" Width="75">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="Modifier" Content="Modifier" Command="{Binding DataContext.OpenModifCommand, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}" />
+                            <Button Content="Modifier" Command="{Binding DataContext.OpenModifCommand, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGrid}}}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

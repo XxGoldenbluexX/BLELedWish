@@ -13,6 +13,9 @@
     <Compile Update="View\AboutView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ConnectionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\EditMessageView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\AboutView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ConnectionView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\EditMessageView.xaml">
