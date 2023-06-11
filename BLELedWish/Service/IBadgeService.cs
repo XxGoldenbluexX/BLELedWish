@@ -9,9 +9,9 @@ namespace BLELedWish.Service
 
         public Task SendMessage(MessageLED message);
 
-        public Task Connect(string address, int port);
+        public Task<bool> Connect(string address, int port);
 
-        public Task Disconnect();
+        public Task<bool> Disconnect();
 
         public abstract string LastErrorMessage { get; }
 

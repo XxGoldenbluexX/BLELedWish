@@ -17,31 +17,34 @@ namespace BLELedWish.Service
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public async Task Connect(string address, int port)
+        public async Task<bool> Connect(string address, int port)
         {
             try
             {
                 client = new TcpClient();
                 await client.ConnectAsync(address, port);
+                return true;
             }catch(Exception e)
             {
                 SetLastError(e.Message);
             }
-            
+            return false;
         }
 
-        public async Task Disconnect()
+        public async Task<bool> Disconnect()
         {
             try
             {
                 client.GetStream().Close();
                 client.Dispose();
                 SetLastError(string.Empty);
+                return true;
             }
             catch (Exception e)
             {
                 SetLastError(e.Message);
             }
+            return false;
         }
 
         public async Task SendMessage(MessageLED message)
