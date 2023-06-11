@@ -5,15 +5,21 @@ using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
+using System.Windows.Controls;
+using System.Windows;
+using System.Windows.Controls.Primitives;
+using System.Windows.Input;
 
-namespace BLELedWish.ViewModel
-{
-    public partial class MessageListViewModel : ObservableObject
-    {
+namespace BLELedWish.ViewModel {
+    public partial class MessageListViewModel : ObservableObject {
 
-        public MessageListViewModel()
-        {
+        [ObservableProperty]
+        public bool _isPopupOpen;
+
+
+        public MessageListViewModel() {
             messages.CollectionChanged += FilterMessages;
         }
 
@@ -36,6 +42,18 @@ namespace BLELedWish.ViewModel
         private async void SendSelectedMessage()
         {
             await Ioc.Default.GetService<IBadgeService>()?.SendMessage(SelectedMessage);
+        }
+
+        [RelayCommand]
+        private async void OpenModif()
+        {
+            IsPopupOpen = true;
+        }
+
+        [RelayCommand]
+        private async void CloseModif()
+        {
+            IsPopupOpen = false;
         }
 
         [RelayCommand]

@@ -1,14 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "lJlb4trJO2HTp6Iw6mGW/VuczZEUruK12/k+oeCICNvgvSYYzpWeB/RzldoIolikxsAGceqP01NAaCrwdK8SMQ==",
+  "dgSpecHash": "bURCa01ZQn3zGKJmAfdqJVeeCIH+cNSDKYNgeoyEu2N1VpfrxdJK0Ps+BS+O3efUKh70QL5XMnLpRpD10AdPcA==",
   "success": true,
-  "projectFilePath": "E:\\Content\\Projects.NET\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
+  "projectFilePath": "C:\\Sources\\DOTnet\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\p2006429\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
-    "C:\\Users\\p2006429\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\p2006429\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\p2006429\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "C:\\Users\\p2006429\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Logan\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
+    "C:\\Users\\Logan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Logan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
