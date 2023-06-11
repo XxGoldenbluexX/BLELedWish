@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.Input;
 using System.Windows.Navigation;
 using BLELedWish.Service;
+using System;
 
 namespace BLELedWish.ViewModel
 {
@@ -20,10 +21,6 @@ namespace BLELedWish.ViewModel
         [ObservableProperty]
         public string _port;
 
-        public ConnectionViewModel() { 
-            IsPopupOpen = true;    
-        }
-
         [RelayCommand]
         private async void CloseError()
         {
@@ -33,8 +30,27 @@ namespace BLELedWish.ViewModel
         [RelayCommand]
         private async void Validate()
         {
-            var nav = Ioc.Default.GetService<BLELedWish.Service.NavigationService>();
-            nav.GoTo<MessageListViewModel>();
+            int portInt;
+            var badge = Ioc.Default.GetService<IBadgeService>();
+            if (Int32.TryParse(Port, out portInt))
+            {
+                if(!await badge.Connect(Addr, portInt))
+                {
+                    ErrorMess = badge.LastErrorMessage;
+                    IsPopupOpen = true;
+                }
+                else
+                {
+                    var nav = Ioc.Default.GetService<BLELedWish.Service.NavigationService>();
+                    nav.GoTo<MessageListViewModel>();
+                }
+            }
+            else
+            {
+                ErrorMess = "Le port n'est pas valide";
+                IsPopupOpen = true;
+            }
+
         }
 
     }

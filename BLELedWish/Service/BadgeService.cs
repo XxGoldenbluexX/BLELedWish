@@ -15,14 +15,22 @@ namespace BLELedWish.Service
 
         public string LastErrorMessage => lastErrorMessage;
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+        private string address;
+
+        private int port;
 
         public async Task<bool> Connect(string address, int port)
         {
             try
             {
-                client = new TcpClient();
-                await client.ConnectAsync(address, port);
+                //client = new TcpClient();
+                //await client.ConnectAsync(address, port);
+                //client.Close();
+                //client.Dispose();
+                this.address = address;
+                this.port = port;
                 return true;
             }catch(Exception e)
             {
@@ -53,7 +61,15 @@ namespace BLELedWish.Service
             {
                 var msg = LEDService.CreateMessage(message.Message);
                 var data = Encoding.ASCII.GetBytes(msg);
-                await client.GetStream().WriteAsync(data, 0, data.Length);
+
+                using (client = new TcpClient()) {
+                    await client.ConnectAsync(address, port);
+                    await client.GetStream().WriteAsync(data, 0, data.Length);
+                    await client.GetStream().FlushAsync();
+                    client.GetStream().Close();
+                }
+                
+
                 SetLastError(string.Empty);
             }
             catch(Exception e)

@@ -31,7 +31,7 @@
                   Margin="0,10,0,0"
                   >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Message" Binding="{Binding Message}" Width="*"/>
+                <DataGridTextColumn Header="Message" Binding="{Binding Message, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
                 <DataGridTemplateColumn Header="Modifier" Width="75">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -56,6 +56,6 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
-        </DataGrid><Image Source="{Binding }"
+        </DataGrid>
     </StackPanel>
 </ContentControl>

@@ -1,5 +1,4 @@
-﻿using BLELedWish.Mock;
-using BLELedWish.Service;
+﻿using BLELedWish.Service;
 using BLELedWish.ViewModel;
 using CommunityToolkit.Mvvm.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,7 +27,7 @@ namespace BLELedWish
             var services = new ServiceCollection();
             
             services.AddSingleton<NavigationService>();
-            services.AddSingleton<IBadgeService,LEDService>();
+            services.AddSingleton<IBadgeService,BadgeService>();
 
             // View Models
             services.AddTransient<MessageListViewModel>();
