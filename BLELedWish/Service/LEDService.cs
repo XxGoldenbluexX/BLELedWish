@@ -1,25 +1,17 @@
-﻿using BLELedWish.Model;
-using System;
-using System.Collections.Generic;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Interop;
+﻿using System.Collections.Generic;
 
 namespace BLELedWish.Service
 {
-    public class LEDService : IBadgeService
+    public class LEDService
     {
 
-        public LEDService()
-        {
-            initDict();
-        }
+        private static Dictionary<char, string[]> _characterDict;
 
-        public static Dictionary<char, string[]> characters = new Dictionary<char, string[]>();
+        private static Dictionary<char, string[]> CharacterDict => _characterDict ??= makeCharacterDict();
 
-        public static void initDict()
+        private static Dictionary<char, string[]> makeCharacterDict()
         {
+            var characters = new Dictionary<char, string[]>();
             characters.Add('A',
     new string[9]{  "111111" ,
                                 "100001" ,
@@ -291,39 +283,7 @@ namespace BLELedWish.Service
                                 "000000" ,
                                 "000000" ,
                                 "000000" });
-        }
-
-        public static void send(string message)
-        {
-
-
-
-            string ipAddress = "127.0.0.1"; // Adresse IP du serveur
-            int port = 4433; // Numéro de port du serveur
-
-            try
-            {
-                TcpClient client = new TcpClient();
-                client.Connect(ipAddress, port); // Se connecter au serveur
-
-                NetworkStream stream = client.GetStream();
-
-                var msg = createMessage(message);
-                byte[] data = Encoding.ASCII.GetBytes(msg); // Convertir la chaîne en tableau de bytes
-                stream.Write(data, 0, data.Length); // Envoyer les données au serveur
-
-                Console.WriteLine("Message envoyé avec succès !");
-
-                stream.Close();
-                client.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Une erreur s'est produite : " + ex.Message);
-            }
-
-
-
+            return characters;
         }
 
         public static string CreateMessage(string v)
@@ -335,18 +295,12 @@ namespace BLELedWish.Service
                 for (int i = 0; i < 6; i++)
                 {
                     tempChar = (v.Length > i) ? v[i] : ' ';
-                    mess += "0" + characters[tempChar][y];
+                    mess += "0" + CharacterDict[tempChar][y];
                 }
                 mess += "00";
             }
 
             return "00000000000000000000000000000000000000000000" + mess + "00000000000000000000000000000000000000000000";
-        }
-
-        public Task SendMessage(MessageLED message)
-        {
-            send(message.Message);
-            return Task.CompletedTask;
         }
     }
 }
