@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using BLELedWish.ViewModel;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace BLELedWish.View
 {

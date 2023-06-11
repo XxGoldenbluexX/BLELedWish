@@ -2,6 +2,7 @@
 using BLELedWish.ViewModel;
 using CommunityToolkit.Mvvm.DependencyInjection;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 
 namespace BLELedWish
 {
@@ -12,6 +13,7 @@ namespace BLELedWish
     {
         public MainWindow()
         {
+            
             InitializeComponent();
 
             Title = "BLELedWish";

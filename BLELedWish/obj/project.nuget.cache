@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "DZxqekVtnDuLp9uXx8lz7YYmg/5zj3pwh20oy3T7tBg0KsW7TCFv3xkASmOzki9DO1CdeCxyc5D2Ym50kyfnMQ==",
   "success": true,
   "projectFilePath": "D:\\shared\\C#Projects\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
@@ -7,6 +8,15 @@
     "C:\\Users\\tonyg\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
     "C:\\Users\\tonyg\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\tonyg\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+=======
+  "dgSpecHash": "bURCa01ZQn3zGKJmAfdqJVeeCIH+cNSDKYNgeoyEu2N1VpfrxdJK0Ps+BS+O3efUKh70QL5XMnLpRpD10AdPcA==",
+  "success": true,
+  "projectFilePath": "C:\\Sources\\DOTnet\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Logan\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
+    "C:\\Users\\Logan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Logan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+>>>>>>> fa5534317abe35c80410fcd6141cabab51b55aec
   ],
   "logs": []
 }
