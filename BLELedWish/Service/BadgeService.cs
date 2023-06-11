@@ -1,7 +1,6 @@
 ﻿using BLELedWish.Model;
 using System;
 using System.ComponentModel;
-using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,11 +23,9 @@ namespace BLELedWish.Service
             {
                 client = new TcpClient();
                 await client.ConnectAsync(address, port);
-                lastErrorMessage = string.Empty;
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(nameof(LastErrorMessage)));
             }catch(Exception e)
             {
-                lastErrorMessage = e.Message;
+                SetLastError(e.Message);
             }
             
         }
@@ -39,11 +36,11 @@ namespace BLELedWish.Service
             {
                 client.GetStream().Close();
                 client.Dispose();
-                lastErrorMessage = string.Empty;
+                SetLastError(string.Empty);
             }
             catch (Exception e)
             {
-                lastErrorMessage = e.Message;
+                SetLastError(e.Message);
             }
         }
 
@@ -54,10 +51,17 @@ namespace BLELedWish.Service
                 var msg = LEDService.CreateMessage(message.Message);
                 var data = Encoding.ASCII.GetBytes(msg);
                 await client.GetStream().WriteAsync(data, 0, data.Length);
-            }catch(Exception e)
-            {
-                lastErrorMessage = e.Message;
+                SetLastError(string.Empty);
             }
+            catch(Exception e)
+            {
+                SetLastError(e.Message);
+            }
+        }
+        private void SetLastError(string message)
+        {
+            lastErrorMessage = message;
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(nameof(LastErrorMessage)));
         }
     }
 }
