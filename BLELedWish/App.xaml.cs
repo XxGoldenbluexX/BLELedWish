@@ -28,7 +28,7 @@ namespace BLELedWish
             var services = new ServiceCollection();
             
             services.AddSingleton<NavigationService>();
-            services.AddSingleton<IBadgeService,MockBadgeService>();
+            services.AddSingleton<IBadgeService,LEDService>();
 
             // View Models
             services.AddTransient<MessageListViewModel>();

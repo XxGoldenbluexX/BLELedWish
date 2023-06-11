@@ -2,5 +2,6 @@
 {
     public interface IMessageBadge
     {
+        string Message { get; set; }
     }
 }

@@ -43,6 +43,6 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
-        </DataGrid>
+        </DataGrid><Image Source="{Binding }"
     </StackPanel>
 </ContentControl>

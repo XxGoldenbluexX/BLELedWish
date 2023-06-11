@@ -6,7 +6,7 @@ namespace BLELedWish.Service
     public interface IBadgeService
     {
 
-        public Task SendMessage(IMessageBadge message);
+        public Task SendMessage(MessageLED message);
 
     }
 }
