@@ -7,7 +7,7 @@ namespace BLELedWish.Mock
 {
     public class MockBadgeService : IBadgeService
     {
-        public async Task SendMessage(IMessageBadge message)
+        public async Task SendMessage(MessageLED message)
         {
             await Task.Delay(10000);
             Trace.WriteLine("Sent");

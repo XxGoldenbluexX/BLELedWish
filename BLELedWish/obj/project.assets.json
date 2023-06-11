@@ -151,19 +151,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Logan\\.nuget\\packages\\": {}
+    "C:\\Users\\tonyg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Sources\\DOTnet\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
+      "projectUniqueName": "D:\\shared\\C#Projects\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
       "projectName": "BLELedWish",
-      "projectPath": "C:\\Sources\\DOTnet\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
-      "packagesPath": "C:\\Users\\Logan\\.nuget\\packages\\",
-      "outputPath": "C:\\Sources\\DOTnet\\BLELedWish\\BLELedWish\\obj\\",
+      "projectPath": "D:\\shared\\C#Projects\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
+      "packagesPath": "C:\\Users\\tonyg\\.nuget\\packages\\",
+      "outputPath": "D:\\shared\\C#Projects\\BLELedWish\\BLELedWish\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Logan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tonyg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -217,8 +217,16 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache D:\\shared\\C#Projects\\BLELedWish\\BLELedWish\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
