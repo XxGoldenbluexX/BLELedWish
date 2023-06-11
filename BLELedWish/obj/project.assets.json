@@ -151,16 +151,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\tonyg\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\Logan\\.nuget\\packages\\": {}
->>>>>>> fa5534317abe35c80410fcd6141cabab51b55aec
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "D:\\shared\\C#Projects\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
       "projectName": "BLELedWish",
       "projectPath": "D:\\shared\\C#Projects\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
@@ -169,16 +164,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tonyg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Sources\\DOTnet\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
-      "projectName": "BLELedWish",
-      "projectPath": "C:\\Sources\\DOTnet\\BLELedWish\\BLELedWish\\BLELedWish.csproj",
-      "packagesPath": "C:\\Users\\Logan\\.nuget\\packages\\",
-      "outputPath": "C:\\Sources\\DOTnet\\BLELedWish\\BLELedWish\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\Logan\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> fa5534317abe35c80410fcd6141cabab51b55aec
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -232,12 +217,16 @@
             "privateAssets": "none"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
->>>>>>> fa5534317abe35c80410fcd6141cabab51b55aec
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problème de lecture du fichier cache D:\\shared\\C#Projects\\BLELedWish\\BLELedWish\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

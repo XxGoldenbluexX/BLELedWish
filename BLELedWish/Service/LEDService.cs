@@ -326,7 +326,7 @@ namespace BLELedWish.Service
 
         }
 
-        private static string createMessage(string v)
+        public static string CreateMessage(string v)
         {
             string mess = "";
             char tempChar = ' ';

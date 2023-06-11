@@ -7,7 +7,7 @@ namespace BLELedWish.Model
         [ObservableProperty]
         private string message = string.Empty;
 
-        [ObservableProperty]
-        private bool enabled = true;
+        // UNE IMAGE
+
     }
 }
