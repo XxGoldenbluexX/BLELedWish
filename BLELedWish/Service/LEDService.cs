@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace BLELedWish.Service
 {
@@ -287,7 +288,8 @@ namespace BLELedWish.Service
         }
 
         public static string CreateMessage(string v)
-        {
+        {   
+            v = v.ToUpper();
             string mess = "";
             char tempChar = ' ';
             for (int y = 0; y < 9; y++)
@@ -295,7 +297,13 @@ namespace BLELedWish.Service
                 for (int i = 0; i < 6; i++)
                 {
                     tempChar = (v.Length > i) ? v[i] : ' ';
-                    mess += "0" + CharacterDict[tempChar][y];
+                    try
+                    {
+                        mess += "0" + CharacterDict[tempChar][y];
+                    }catch (Exception e)
+                    {
+                        mess += "0" + CharacterDict[' '][y];
+                    }
                 }
                 mess += "00";
             }

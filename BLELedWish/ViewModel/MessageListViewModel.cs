@@ -15,10 +15,6 @@ using System.Windows.Input;
 namespace BLELedWish.ViewModel {
     public partial class MessageListViewModel : ObservableObject {
 
-        [ObservableProperty]
-        public bool _isPopupOpen;
-
-
         public MessageListViewModel() {
             messages.CollectionChanged += FilterMessages;
         }
@@ -42,18 +38,6 @@ namespace BLELedWish.ViewModel {
         private async void SendSelectedMessage()
         {
             await Ioc.Default.GetService<IBadgeService>()?.SendMessage(SelectedMessage);
-        }
-
-        [RelayCommand]
-        private async void OpenModif()
-        {
-            IsPopupOpen = true;
-        }
-
-        [RelayCommand]
-        private async void CloseModif()
-        {
-            IsPopupOpen = false;
         }
 
         [RelayCommand]
